@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TakenApp.AddTask">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <ScrollView>
+                <StackLayout>
+                    <!-- Date -->
+                    <StackLayout x:Name="DateLayout" Margin="5" >
+                        <Label Text="Datum:" />
+                        <DatePicker x:Name="DatePicker" Format="dd/MM/yyyy" />
+                    </StackLayout>
+                    <!-- Time -->
+                    <StackLayout x:Name="TimeLayout" Margin="5" >
+                        <Label Text="Tijd:" />
+                        <TimePicker x:Name="TimePicker" Format="hh:mm" />
+                    </StackLayout>
+                    <!-- Name -->
+                    <StackLayout x:Name="NameLayout" Margin="5" >
+                        <Label Text="Naam:" />
+                        <Entry x:Name="NameEntry" Placeholder="...naam..." />
+                    </StackLayout>
+                    <!-- Description -->
+                    <StackLayout x:Name="DescriptionLayout" Margin="5" >
+                        <Label Text="Beschrijving:" />
+                        <Entry x:Name="DescriptionEntry" Placeholder="...taakbeschrijving..." />
+                    </StackLayout>
+                    <!-- Interval -->
+                    <StackLayout x:Name="IntervalLayout" Margin="5" >
+                        <Label Text="Herhaling:" />
+                        <Entry x:Name="IntervalEntry" Placeholder="0 - 365" />
+                    </StackLayout>
+                    <!-- Save -->
+                    <StackLayout x:Name="ButtonLayout" Margin="5" >
+                        <Button x:Name="SaveButton" Text="Opslaan" Clicked="SaveButton_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

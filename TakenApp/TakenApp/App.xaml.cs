@@ -11,7 +11,7 @@ namespace TakenApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage() { Title = "Taken" });
         }
 
         protected override void OnStart()

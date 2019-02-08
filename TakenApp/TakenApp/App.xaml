@@ -3,6 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TakenApp.App">
     <Application.Resources>
+        <!-- Styles -->
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True" >
+            <Setter Property="BackgroundColor" Value="#1a1a1a" /> <!-- Very dark gray -->
+        </Style>
 
+        <Style TargetType="NavigationPage" ApplyToDerivedTypes="True" >
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+            <Setter Property="NavigationPage.BarBackgroundColor" Value="#1a1a1a" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
+        
+        <Style TargetType="Label" ApplyToDerivedTypes="True" >
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+
+        <Style TargetType="Entry" ApplyToDerivedTypes="True" >
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="PlaceholderColor" Value="Gray" />
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+        </Style>
+
+        <Style TargetType="DatePicker" ApplyToDerivedTypes="True" >
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+        </Style>
+
+        <Style TargetType="TimePicker" ApplyToDerivedTypes="True" >
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+        </Style>
+
+        <Style TargetType="Button" ApplyToDerivedTypes="True" >
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+        </Style>
+
+        <Style TargetType="ListView" ApplyToDerivedTypes="True" >
+            <Setter Property="BackgroundColor" Value="#1a1a1a" />
+            <Setter Property="SeparatorColor" Value="White" />
+        </Style>
     </Application.Resources>
 </Application>

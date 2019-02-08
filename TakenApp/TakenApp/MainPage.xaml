@@ -3,12 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TakenApp"
              x:Class="TakenApp.MainPage">
-
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <!-- Body -->
+        <StackLayout x:Name="BodyLayout" VerticalOptions="CenterAndExpand" >
+            <!-- Date -->
+            <StackLayout x:Name="DateLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <DatePicker x:Name="DatePicker" />
+            </StackLayout>
+            <!-- Buttons -->
+            <StackLayout x:Name="ButtonsLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Button x:Name="AddButton" Clicked="AddButton_Clicked" Text="Toevoegen" />
+                <Button x:Name="RemoveButton" Clicked="RemoveButton_Clicked" Text="Verwijderen" />
+            </StackLayout>
+            <!-- Tasks -->
+            <StackLayout x:Name="TaskLayout" >
+                <ListView x:Name="TaskListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Description}" TextColor="White" DetailColor="White" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+        <!-- Footer -->
+        <StackLayout x:Name="FooterLayout" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" >
+            <Label x:Name="FooterLabel" />
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>
